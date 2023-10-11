@@ -3,32 +3,116 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./images/favicon-32x32.png"
+      href="./img/favicon-32x32.png"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap" rel="stylesheet">  
     <link rel="stylesheet" href="./css/main.css" />
-
     <title>Frontend Mentor | Rock, Paper, Scissors</title>
-
-    Score Rules You Picked The House Picked You Win You Lose Play Again
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution { font-size: 11px; text-align: center; }
-      .attribution a { color: hsl(228, 45%, 44%); }
-    </style>
   </head>
   <body>
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+    <!-- Score Rules You Picked The House Picked You Win You Lose Play Again -->
+      <div id="container">
+        <div id="game-container">
+          <div id="game-screen">
+            <div id="header">
+              <img id="logo" src="/dist/img/logo.svg">
+              <div id="score-box">
+                <p class="label">SCORE</p>
+                <div id="score">
+                  <div class="counter" id="wins">12</div>
+                  <p class="counter">-</p>
+                  <div class="counter" id="draws">0</div>
+                  <p class="counter">-</p>
+                  <div class="counter" id="losses">10</div>
+
+                </div>
+                <div id="wdl">W - D - L</div>
+              </div>
+
+            </div>
+            <div id="game-board">
+              <div id="selector">
+                <div id="paper-icon" class="icon-group">
+                  <div id="paper-frame-one" class="icon-frame-one"></div>
+                  <div id="paper-frame-two" class="icon-frame-two"></div>
+                  <div class="icon-back-one"></div>
+                  <div class="icon-back-two"></div>
+                  <img src="/dist/img/icon-paper.svg" alt="paper-icon" id="paper" class="icon">
+                </div>
+                <div id="scissor-icon" class="icon-group">
+                  <div id="scissor-frame-one" class="icon-frame-one"></div>
+                  <div id="scissor-frame-two" class="icon-frame-two"></div>
+                  <div class="icon-back-one"></div>
+                  <div class="icon-back-two"></div>
+                  <img src="/dist/img/icon-scissors.svg" alt="paper-icon" id="paper" class="icon">
+                </div>
+                <div id="rock-icon" class="icon-group">
+                  <div id="rock-frame-one" class="icon-frame-one"></div>
+                  <div id="rock-frame-two" class="icon-frame-two"></div>
+                  <div class="icon-back-one"></div>
+                  <div class="icon-back-two"></div>
+                  <img src="/dist/img/icon-rock.svg" alt="paper-icon" id="paper" class="icon">
+                </div>
+             
+                <img src="/dist/img/bg-triangle.svg" alt="triangle-backdrop" id="trinagle" >
+
+              </div>
+              <div id="played">
+                <div id="you-picked">
+                  <div class="played-label"><p>YOU PICKED</p></div>
+                  <div id="picked-icon" class="picked-group">
+                    <div id="picked-frame-one" class="played-frame-one"></div>
+                    <div id="picked-frame-two" class="played-frame-two"></div>
+                    <div class="picked-back-one"></div>
+                    <div class="picked-back-two"></div>
+                    <img src="/dist/img/icon-scissors.svg" alt="picked-icon" id="picked" class="you-picked-icon">
+                    <div id="you-win-rings">
+                      <div class="win-ring-one"></div>
+                      <div class="win-ring-two"></div>
+                      <div class="win-ring-three"></div>
+                    </div>
+                  </div>
+                </div>
+                <div id="house-picked">
+                  <div class="played-label"><p>THE HOUSE PICKED</p></div>
+                  <div id="house-blank"></div>
+                  <div id="house-icon" class="house-group">
+                    <div id="house-frame-one" class="played-frame-one"></div>
+                    <div id="house-frame-two" class="played-frame-two"></div>
+                    <div class="picked-back-one"></div>
+                    <div class="picked-back-two"></div>
+                    <img src="/dist/img/icon-rock.svg" alt="picked-icon" id="picked" class="house-picked-icon">
+                    <div id="you-win-rings">
+                      <div class="win-ring-one"></div>
+                      <div class="win-ring-two"></div>
+                      <div class="win-ring-three"></div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div id="rules-btn">
+            <p>RULES</p>
+         </div>
+        </div>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+          >. Coded by
+          <a
+          href="https://github.com/gkgaines14"
+          target="_blank"
+          >Greg Gaines</a
+          >.
+        </div>
+      </div>
     </div>
   </body>
 </html>
