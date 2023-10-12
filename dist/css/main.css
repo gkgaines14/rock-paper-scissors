@@ -5,6 +5,9 @@
   font-family: 'Barlow Semi Condensed', sans-serif;
   font-size: 16pt; }
 
+body {
+  overflow: hidden; }
+
 #container {
   background: radial-gradient(at top, #1f3756, #141539);
   min-width: 1366px;
@@ -15,7 +18,6 @@
   justify-content: space-between;
   align-items: center; }
   #container #game-container {
-    border: solid 1px green;
     width: 1366px;
     min-height: 95vh;
     padding: 1.7rem;
@@ -24,10 +26,12 @@
     justify-content: center; }
     #container #game-container #game-screen {
       width: 55%;
+      height: 95%;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center; }
+      justify-content: center;
+      margin-top: 3rem; }
       #container #game-container #game-screen #header {
         border: #606e85 solid 3px;
         border-radius: 15px;
@@ -75,8 +79,7 @@
         align-items: center;
         justify-content: center; }
         #container #game-container #game-screen #game-board #selector {
-          position: relative;
-          display: none; }
+          position: relative; }
           #container #game-container #game-screen #game-board #selector #paper-icon {
             position: absolute;
             top: -30%;
@@ -108,7 +111,8 @@
             position: relative;
             width: 190px;
             height: 190px;
-            border-radius: 50%; }
+            border-radius: 50%;
+            cursor: pointer; }
           #container #game-container #game-screen #game-board #selector .icon {
             position: absolute;
             z-index: 5;
@@ -147,7 +151,7 @@
             top: 5%;
             z-index: 1; }
         #container #game-container #game-screen #game-board #played {
-          display: flex;
+          display: none;
           justify-content: space-between;
           width: 100%;
           height: 100%; }
@@ -157,7 +161,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            position: relative; }
+            position: relative;
+            transition: transform 1s; }
             #container #game-container #game-screen #game-board #played #you-picked .played-label {
               color: #f4f4f4;
               margin-bottom: 3rem; }
@@ -177,7 +182,7 @@
             #container #game-container #game-screen #game-board #played #you-picked #picked {
               position: absolute;
               z-index: 5;
-              top: 31%;
+              top: 34%;
               left: 33%;
               width: 95px; }
             #container #game-container #game-screen #game-board #played #you-picked .picked-back-one {
@@ -219,7 +224,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            position: relative; }
+            position: relative;
+            transition: transform 1s; }
             #container #game-container #game-screen #game-board #played #house-picked .played-label {
               color: #f4f4f4;
               margin-bottom: 3rem; }
@@ -232,57 +238,57 @@
             #container #game-container #game-screen #game-board #played #house-picked #picked-icon #house-frame-two {
               background: #3850c7; }
             #container #game-container #game-screen #game-board #played #house-picked #house-blank {
-              display: none;
               background-color: #1b2241;
               width: calc(280px* 0.78);
               height: calc(280px* 0.72);
               border-radius: 50%;
               z-index: 0;
               margin-top: 2rem; }
-          #container #game-container #game-screen #game-board #played .house-group {
-            position: relative;
-            width: 280px;
-            height: 280px;
-            border-radius: 50%; }
-          #container #game-container #game-screen #game-board #played #picked {
-            position: absolute;
-            z-index: 5;
-            top: 31%;
-            left: 33%;
-            width: 95px; }
-          #container #game-container #game-screen #game-board #played .picked-back-one {
-            background-color: #f4f4f4;
-            width: calc(280px* 0.78);
-            height: calc(280px* 0.72);
-            border-radius: 50%;
-            position: absolute;
-            z-index: 4;
-            top: 17%;
-            left: 11%; }
-          #container #game-container #game-screen #game-board #played .picked-back-two {
-            background-color: #cfcfcf;
-            width: calc(280px* 0.78);
-            height: calc(280px* 0.72);
-            border-radius: 50%;
-            position: absolute;
-            z-index: 3;
-            top: 12%;
-            left: 11%; }
-          #container #game-container #game-screen #game-board #played #house-frame-one {
-            background-color: #dd405d;
-            width: 280px;
-            height: 280px;
-            border-radius: 50%;
-            position: absolute;
-            z-index: 2; }
-          #container #game-container #game-screen #game-board #played #house-frame-two {
-            background: #96273b;
-            width: 280px;
-            height: 280px;
-            border-radius: 50%;
-            position: absolute;
-            top: 5%;
-            z-index: 1; }
+            #container #game-container #game-screen #game-board #played #house-picked #house-icon {
+              display: none;
+              position: relative;
+              width: 280px;
+              height: 280px;
+              border-radius: 50%; }
+            #container #game-container #game-screen #game-board #played #house-picked #house-picked-icon {
+              position: absolute;
+              z-index: 5;
+              top: 34%;
+              left: 33%;
+              width: 95px; }
+            #container #game-container #game-screen #game-board #played #house-picked .picked-back-one {
+              background-color: #f4f4f4;
+              width: calc(280px* 0.78);
+              height: calc(280px* 0.72);
+              border-radius: 50%;
+              position: absolute;
+              z-index: 4;
+              top: 17%;
+              left: 11%; }
+            #container #game-container #game-screen #game-board #played #house-picked .picked-back-two {
+              background-color: #cfcfcf;
+              width: calc(280px* 0.78);
+              height: calc(280px* 0.72);
+              border-radius: 50%;
+              position: absolute;
+              z-index: 3;
+              top: 12%;
+              left: 11%; }
+            #container #game-container #game-screen #game-board #played #house-picked #house-frame-one {
+              background-color: #dd405d;
+              width: 280px;
+              height: 280px;
+              border-radius: 50%;
+              position: absolute;
+              z-index: 2; }
+            #container #game-container #game-screen #game-board #played #house-picked #house-frame-two {
+              background: #96273b;
+              width: 280px;
+              height: 280px;
+              border-radius: 50%;
+              position: absolute;
+              top: 5%;
+              z-index: 1; }
   #container #rules-btn {
     border: #f4f4f4 solid 1px;
     border-radius: 10px;
@@ -294,11 +300,16 @@
     padding: 0 1.5rem;
     position: absolute;
     bottom: 4%;
-    right: 2%; }
+    right: 2%;
+    cursor: pointer; }
     #container #rules-btn p {
       font-size: 0.7rem;
       font-weight: 700;
       letter-spacing: 3pt; }
+  #container #rules-btn:hover {
+    color: #1f3756;
+    border: #1f3756 solid 1px;
+    background-color: #f4f4f4; }
 
 .attribution {
   font-size: 11px;
