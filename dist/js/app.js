@@ -12,6 +12,9 @@ const pickedFrameOne = document.querySelector('#picked-frame-one');
 const pickedFrameTwo = document.querySelector('#picked-frame-two');
 const youPickedTile = document.querySelector('#you-picked');
 const housePickedTile = document.querySelector('#house-picked');
+const youWinRing = document.querySelector('#you-win-ring');
+const houseWinRing = document.querySelector('#house-win-ring');
+const resultTile = document.querySelector('#result-tile');
 
 const advance = (selection) => {
   selector.style.display = 'none';
@@ -49,6 +52,11 @@ const advance = (selection) => {
     houseBlank.style.display = 'none';
     houseIcon.style.display = 'block';
   }, 2000);
+
+  setTimeout(() => {
+    resultTile.style.display = 'flex';
+    youWinRing.style.display = 'block';
+  }, 2500);
 };
 
 //Listners
