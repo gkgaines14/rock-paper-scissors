@@ -15,6 +15,10 @@ const housePickedTile = document.querySelector('#house-picked');
 const youWinRing = document.querySelector('#you-win-ring');
 const houseWinRing = document.querySelector('#house-win-ring');
 const resultTile = document.querySelector('#result-tile');
+const replayButton = document.querySelector('#replay-btn');
+const rulesButton = document.querySelector('#rules-btn');
+const rulesModal = document.querySelector('#rules-modal');
+const closeButton = document.querySelector('#close-btn');
 
 const advance = (selection) => {
   selector.style.display = 'none';
@@ -63,3 +67,31 @@ const advance = (selection) => {
 rockIcon.addEventListener('click', () => advance('rock'));
 paperIcon.addEventListener('click', () => advance('paper'));
 scissorIcon.addEventListener('click', () => advance('scissor'));
+
+rulesButton.addEventListener('click', () => {
+  rulesModal.style.display = 'flex';
+});
+
+closeButton.addEventListener('click', () => {
+  rulesModal.style.display = 'none';
+});
+
+window.onclick = function (event) {
+  if (event.target == rulesModal) {
+    rulesModal.style.display = 'none';
+  }
+};
+
+replayButton.addEventListener('click', () => {
+  played.style.display = 'none';
+  selector.style.display = 'block';
+
+  houseBlank.style.display = 'block';
+  houseIcon.style.display = 'none';
+
+  resultTile.style.display = 'none';
+  youWinRing.style.display = 'none';
+
+  housePickedTile.style.transform = 'translateX(0%)';
+  youPickedTile.style.transform = 'translateX(0%)';
+});
