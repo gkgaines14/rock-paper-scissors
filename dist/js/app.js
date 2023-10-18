@@ -52,7 +52,7 @@ const advance = (selection) => {
       //House picks rock
 
       //Set house icon
-      housePickedImg.src = '/dist/img/icon-rock.svg';
+      housePickedImg.src = './img/icon-rock.svg';
       houseFrameOne.style.backgroundColor = 'hsl(349, 70%, 56%)';
       houseFrameTwo.style.backgroundColor = 'hsl(349, 59%, 37%)';
 
@@ -94,7 +94,7 @@ const advance = (selection) => {
       //House picks paper
 
       //Set house icon
-      housePickedImg.src = '/dist/img/icon-paper.svg';
+      housePickedImg.src = './img/icon-paper.svg';
       houseFrameOne.style.backgroundColor = 'hsl(230, 89%, 65%)';
       houseFrameTwo.style.backgroundColor = 'hsl(230, 56%, 50%)';
 
@@ -136,7 +136,7 @@ const advance = (selection) => {
       //House picks scissors
 
       //Set house icon
-      housePickedImg.src = '/dist/img/icon-scissors.svg';
+      housePickedImg.src = './img/icon-scissors.svg';
       houseFrameOne.style.backgroundColor = 'hsl(40, 84%, 53%)';
       houseFrameTwo.style.backgroundColor = 'hsl(39, 91%, 38%)';
 
@@ -179,18 +179,18 @@ const advance = (selection) => {
   //Player selection
   switch (selection) {
     case 'rock':
-      pickedImg.src = '/dist/img/icon-rock.svg';
+      pickedImg.src = './img/icon-rock.svg';
       pickedFrameOne.style.backgroundColor = 'hsl(349, 70%, 56%)';
       pickedFrameTwo.style.backgroundColor = 'hsl(349, 59%, 37%)';
       break;
     case 'paper':
-      pickedImg.src = '/dist/img/icon-paper.svg';
+      pickedImg.src = './img/icon-paper.svg';
       pickedFrameOne.style.backgroundColor = 'hsl(230, 89%, 65%)';
       pickedFrameTwo.style.backgroundColor = 'hsl(230, 56%, 50%)';
       break;
 
     default:
-      pickedImg.src = '/dist/img/icon-scissors.svg';
+      pickedImg.src = './img/icon-scissors.svg';
       pickedFrameOne.style.backgroundColor = 'hsl(40, 84%, 53%)';
       pickedFrameTwo.style.backgroundColor = 'hsl(39, 91%, 38%)';
   }
