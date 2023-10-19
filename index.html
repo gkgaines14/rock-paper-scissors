@@ -17,16 +17,12 @@
     <title>Frontend Mentor | Rock, Paper, Scissors</title>
   </head>
   <body>
-    <!-- Score Rules You Picked The House Picked You Win You Lose Play Again -->
-
     <div id="container">
       <div id="rules-modal">
         <div id="rules-background">
-          <div id="rules-header">
-            <p>RULES</p>
-            <img src="./img/icon-close.svg" alt="close button" id="close-btn" />
-          </div>
+          <p id="rules-label">RULES</p>
           <img src="./img/image-rules.svg" alt="rules for play" id="rules" />
+          <img src="./img/icon-close.svg" alt="close button" id="close-btn" />
         </div>
       </div>
       <div id="game-container">
@@ -36,13 +32,31 @@
             <div id="score-box">
               <p class="label">SCORE</p>
               <div id="score">
-                <div class="counter" id="wins">0</div>
-                <p class="counter">-</p>
-                <div class="counter" id="draws">0</div>
-                <p class="counter">-</p>
-                <div class="counter" id="losses">0</div>
+                <div class="score-set">
+                  <div class="counter" id="wins">0</div>
+                  <div class="hyphen">-</div>
+                  <div class="wdl">W</div>
+                </div>
+                <div class="dash-set">
+                  <p class="dash">-</p>
+                  <p class="dash-bottom">-</p>
+                </div>
+                <div class="score-set">
+                  <div class="counter" id="draws">0</div>
+                  <div class="hyphen">-</div>
+                  <div class="wdl">D</div>
+                </div>
+                <div class="dash-set">
+                  <p class="dash">-</p>
+                  <p class="dash-bottom">-</p>
+                </div>
+                <div class="score-set">
+                  <div class="counter" id="losses">0</div>
+                  <div class="hyphen">-</div>
+
+                  <div class="wdl">L</div>
+                </div>
               </div>
-              <div id="wdl">W - D - L</div>
             </div>
           </div>
           <div id="game-board">
@@ -87,7 +101,7 @@
               <img
                 src="./img/bg-triangle.svg"
                 alt="triangle-backdrop"
-                id="trinagle"
+                id="triangle"
               />
             </div>
             <div id="played">
@@ -139,8 +153,8 @@
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by
-        <a href="https://github.com/gkgaines14" target="_blank">Greg Gaines</a>.
+        >Coded by
+        <a href="https://github.com/gkgaines14" target="_blank">Greg Gaines</a>
       </div>
     </div>
 
