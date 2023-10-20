@@ -39,9 +39,13 @@ sessionStorage.setItem('wins', 0);
 sessionStorage.setItem('draws', 0);
 sessionStorage.setItem('losses', 0);
 
+let screenWidth = window.innerWidth;
+
 const advance = (selection) => {
   selector.style.display = 'none';
   played.style.display = 'flex';
+
+  console.log(screenWidth);
 
   let houseChoice = Math.floor(Math.random() * (4 - 1) + 1);
   console.log(houseChoice);
@@ -197,8 +201,10 @@ const advance = (selection) => {
 
   //Slide icons apart
   setTimeout(() => {
-    youPickedTile.style.transform = 'translateX(-45%)';
-    housePickedTile.style.transform = 'translateX(45%)';
+    if (screenWidth > 960) {
+      youPickedTile.style.transform = 'translateX(-45%)';
+      housePickedTile.style.transform = 'translateX(45%)';
+    }
   }, 500);
 
   //Reveal house icon
@@ -238,7 +244,7 @@ window.onclick = function (event) {
 //Play again
 replayButton.addEventListener('click', () => {
   played.style.display = 'none';
-  selector.style.display = 'block';
+  selector.style.display = 'flex';
 
   houseBlank.style.display = 'block';
   houseIcon.style.display = 'none';
@@ -247,6 +253,8 @@ replayButton.addEventListener('click', () => {
   youWinRing.style.display = 'none';
   houseWinRing.style.display = 'none';
 
-  housePickedTile.style.transform = 'translateX(0%)';
-  youPickedTile.style.transform = 'translateX(0%)';
+  if (screenWidth > 960) {
+    housePickedTile.style.transform = 'translateX(0%)';
+    youPickedTile.style.transform = 'translateX(0%)';
+  }
 });
