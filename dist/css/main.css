@@ -449,7 +449,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    overflow: hidden; }
     #container #rules-modal {
       position: fixed;
       z-index: 100;
@@ -639,8 +640,7 @@ body {
                 border-radius: 50%;
                 position: absolute;
                 top: 5%;
-                z-index: 1;
-                box-shadow: 0 0px 6px 1px rgba(28, 28, 28, 0.823); }
+                z-index: 1; }
               #container #game-container #game-screen #game-board #played #you-picked #you-win-ring {
                 color: white;
                 width: 290px;
